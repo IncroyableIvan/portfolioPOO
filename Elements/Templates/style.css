@@ -1,0 +1,145 @@
+body {
+	margin: 0;
+}
+span {
+	display: none;
+}
+header {
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #00003B;
+	color: #D1D1D4;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+footer {
+	background-color: #00003B;
+	color: #D1D1D4;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bolder;
+	font-style: italic;
+}
+#list-parent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	padding-left: 0;
+	padding-right: 15px;
+}
+.list-element {
+	display: flex;
+	padding-left: 15px;
+}
+#screen_accueil {
+	flex-wrap: wrap;
+}
+#screen_presentation {
+	flex-wrap: wrap;
+}
+#screen_contact {
+	flex-wrap: wrap;
+}
+header img {
+	width: 5%;
+	padding-left: 15px;
+}
+h3 {
+	font-size: 50px;
+	text-transform: uppercase;
+}
+p {
+	font-size: 20px;
+	text-transform: uppercase;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.p-footer {
+	font-size: 15px;
+	text-transform: uppercase;
+}
+.debut_portfolio {
+    background-image: url("/Elements/img/top_screen.jpg");
+    padding: 280px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:2em;
+	background-size: cover;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.border {
+	border: 5px black groove;
+	font-size: 35px;
+}
+main {
+	margin-top: 60px;
+	background-color: #8F7577;
+	display: flex;
+	flex-direction: column;
+}
+#right_div {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #D1D1D4;
+	min-width: 475px;
+}
+#left_div {
+	width: 50%;
+	overflow: hidden;
+	min-width: 350px;
+}
+#left_div img {
+	width: 100%;
+}
+#sreen_accueil {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-direction: row;
+}
+#sreen_presentation {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-direction: row;
+}
+#sreen_contact {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	flex-direction: row;
+}
+@media screen and (max-width: 950px) {
+	main {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	main div {
+		width: 100%;
+	}
+	#left_div, #right_div {
+		width: 100%
+	}
+}
+@media screen and (max-width: 562px) {
+	header img {
+		padding-left: 0;
+	}
+	#list-parent {
+		display: none;
+	}
+}
