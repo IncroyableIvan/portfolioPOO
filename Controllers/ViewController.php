@@ -1,4 +1,5 @@
 <?php
+require_once('Models/OrmClass.php');
   class View
   {
     private $title;
@@ -8,7 +9,12 @@
     private $templateExtention = ".html";
     private $styleExtention = ".css";
     private $templateBase = "Templates/template.php";
+    private $orm;
 
+    public function __construct()
+    {
+      $this->orm = Orm::getInstance();
+    }
     public function loadHtml($fileName)
     {
       $html = "";
@@ -25,6 +31,9 @@
     }
     public function renderPage($title)
     {
+      // $this->orm->insertData('users', 'Ivan', 'Ceci est une description');
+      // $this->orm->deleteData('users', '3');
+      // var_dump($this->orm->getAllData('users'));die;
       $template = file_get_contents($this->directory . $this->templateBase);
       $html = "";
       $css = "";
